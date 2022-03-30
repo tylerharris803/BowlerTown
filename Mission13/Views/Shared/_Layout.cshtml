@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Mission13</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="bg-dark text-white p-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col navbar-brand" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50px">BOWLER TOWN</div>
+                    <i style="padding-top: 17px" class="fa-3x fa fa-regular fa-bowling-ball"></i>
+                    <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <a class="nav-link text-light" asp-controller="Home" asp-action="Add">Add Bowler</a>
+                </div>
+                <p>Connect with other bowling fanatics!</p>
+            </div>
+        </div>
+    </header>
+    <div class="row m-1 p-1">
+        <div class="col-9 container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <div id="teams" class="col-3  btn-block">
+            <br />
+            <vc:teams></vc:teams>
+        </div>
+
+
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Mission13
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
